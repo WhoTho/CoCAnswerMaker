@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Answer Maker</title>
+    </head>
+    <body>
+        <p>my own thing so go away but if u want to look at it its kinda cool</p>
+        <p>u put in your code and itll give u stuff yep so cool</p>
+    </body>
+    <div class="mainInputs">
+        <p>Code:</p>
+        <textarea id="code" placeholder="stuff"></textarea>
+
+        <p>Language:</p>
+        <form>
+            <select id="language">
+                <option value="Python">Python</option>
+                <option value="Ruby">Ruby</option>
+                <option value="Java">Java</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Perl">Perl</option>
+            </select>
+        </form>
+
+        <input type="checkbox" id="autoCopy" checked />
+        <label for="autoCopy">Auto Copy</label>
+    </div>
+
+    <div id="submitButtonDiv">
+        <button id="submitButton" onclick="submit()">Generate</button>
+    </div>
+
+    <hr />
+
+    <br />
+
+    <div id="results">
+        <p>No results yet</p>
+    </div>
+
+    <script src="answerMaker.js"></script>
+</html>
