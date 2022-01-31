@@ -30,7 +30,7 @@ function printResult(result) {
 async function submit() {
     await clearResults();
     var language = document.getElementById("language").value;
-    var codeInput = document.getElementById("code").ariaValueMax;
+    var codeInput = document.getElementById("code").value;
     var formattedCode = `${JSON.stringify(String.raw`${codeInput}`)
         .slice(1, -1)
         .replace(/'/g, "\\'")}`;
