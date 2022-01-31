@@ -32,7 +32,7 @@ async function submit() {
     var language = document.getElementById("language").value;
     var codeInput = document.getElementById("code").value;
     var formattedCode;
-    if (document.getElementById("autoCopy").checked) {
+    if (document.getElementById("format").checked) {
         formattedCode = `${JSON.stringify(String.raw`${codeInput}`)
         .slice(1, -1)
         .replace(/'/g, "\\'")}`;
