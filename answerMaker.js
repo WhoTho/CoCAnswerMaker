@@ -34,5 +34,5 @@ async function submit() {
     var formattedCode = `${JSON.stringify(String.raw`${codeInput}`)
         .slice(1, -1)
         .replace(/'/g, "\\'")}`;
-    printResult(`{lang: ${language}, solution: '${formattedCode}'}`);
+    printResult(`{lang: '${language}', solution: '${formattedCode}'},`);
 }
