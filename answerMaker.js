@@ -24,5 +24,7 @@ async function submit() {
     }
     printResult(`{lang: '${language}', solution: '${formattedCode}'},`);
 
-    document.getElementById("code").value = "";
+    if (document.getElementById("autoClear").checked) {
+        document.getElementById("code").value = "";
+    }
 }

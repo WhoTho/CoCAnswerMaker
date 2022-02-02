@@ -10,8 +10,8 @@
     </body>
     <div class="mainInputs">
         <p>Code:</p>
-        <textarea id="code" placeholder="stuff" style="width:100%;height:200px;"></textarea>
-        
+        <textarea id="code" placeholder="stuff" style="width: 100%; height: 200px"></textarea>
+
         <form>
             <p>Language:</p>
             <select id="language">
@@ -23,21 +23,33 @@
             </select>
         </form>
 
+        <br />
+
         <input type="checkbox" id="autoCopy" checked />
         <label for="autoCopy">Auto Copy</label>
+
+        <br />
+
         <input type="checkbox" id="format" checked />
         <label for="format">Format</label>
+
+        <br />
+
+        <input type="checkbox" id="autoClear" checked />
+        <label for="autoClear">Auto Clear</label>
     </div>
+
+    <br />
 
     <div id="submitButtonDiv">
         <button id="submitButton" onclick="submit()">Generate</button>
     </div>
 
-    <hr />
-
     <br />
 
-    <pre id="resultText" style="white-space:pre-wrap">TEXT</pre>
+    <hr />
+
+    <pre id="resultText" style="white-space: pre-wrap">TEXT</pre>
 
     <script src="answerMaker.js"></script>
 </html>
