@@ -13,6 +13,7 @@ function printResult(result) {
 async function submit() {
     var language = document.getElementById("language").value;
     var codeInput = document.getElementById("code").value;
+
     var formattedCode;
     if (document.getElementById("format").checked) {
         formattedCode = `${JSON.stringify(String.raw`${codeInput}`)
@@ -22,4 +23,6 @@ async function submit() {
         formattedCode = codeInput.replace(/(?<!\\)'/g, "\\'");
     }
     printResult(`{lang: '${language}', solution: '${formattedCode}'},`);
+
+    document.getElementById("code").value = "";
 }
