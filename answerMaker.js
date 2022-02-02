@@ -16,10 +16,10 @@ async function submit() {
     var formattedCode;
     if (document.getElementById("format").checked) {
         formattedCode = `${JSON.stringify(String.raw`${codeInput}`)
-        .slice(1, -1)
-        .replace(/'/g, "\\'")}`;
+            .slice(1, -1)
+            .replace(/'/g, "\\'")}`;
     } else {
-        formattedCode = codeInput;
+        formattedCode = codeInput.replace(/(?<!\\)'/g, "\\'");
     }
     printResult(`{lang: '${language}', solution: '${formattedCode}'},`);
 }
