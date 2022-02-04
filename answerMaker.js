@@ -4,7 +4,7 @@ function copyText(text) {
     navigator.clipboard.writeText(text);
 }
 
-function printResult(results) {
+function printResults(results) {
     document.getElementById("resultText").innerText = results.join("</br>");
     if (autoCopy) {
         copyText(results.join("\n"));
