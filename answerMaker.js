@@ -63,7 +63,7 @@ async function submit() {
             formattedSplit.forEach((code) => {
                 var lang = detectLanguage(code);
                 if (lang === "Python" && removeWhitespaces) code = code.replace(/    /g, " ");
-                answerList.push(code);
+                answerList.push(code.replace(/(\\n)*$/, ""));
                 languageList.push(lang);
             });
         } else {
