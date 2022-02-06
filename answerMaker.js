@@ -5,7 +5,7 @@ function copyText(text) {
 }
 
 function printResults(results) {
-    document.getElementById("resultText").innerText = results.join("</br>");
+    document.getElementById("resultText").innerText = results.join("\n");
     if (autoCopy) {
         copyText(results.join("\n"));
     }
@@ -30,7 +30,7 @@ function setOptionVaribles() {
 
 function detectLanguage(text) {
     var python = text.includes("input") + text.includes("open(0)");
-    var ruby = text.includes("gets") + text.includes("`dd`") + text.includes("*$<");
+    var ruby = text.includes("gets") + text.includes("`dd`") + text.includes("$<");
     if (python > 0 && ruby == 0) return "Python";
     if (ruby > 0 && python == 0) return "Ruby";
     alert("Unknown language");
