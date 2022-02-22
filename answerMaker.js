@@ -12,6 +12,13 @@ function printResults(results) {
     return;
 }
 
+function autoProcessText() {
+    if (document.getElementById("autoProcess").checked) {
+        if (document.getElementById("code").value !== "") submit();
+    }
+    return;
+}
+
 function setOptionVaribles() {
     var options = [
         "autoCopy",
